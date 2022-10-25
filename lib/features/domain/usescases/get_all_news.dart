@@ -5,7 +5,7 @@ import 'package:dap_test/features/domain/repostiroy/all_news_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
-class GetAllNews extends UseCase<List<AllNewsEntity>, PageAllNewsParams>>{
+class GetAllNews extends UseCase<List<AllNewsEntity>, PageAllNewsParams>{
   final AllNewsRepository newsRepository;
 
   GetAllNews(this.newsRepository);
@@ -18,7 +18,7 @@ class GetAllNews extends UseCase<List<AllNewsEntity>, PageAllNewsParams>>{
 
 class PageAllNewsParams extends Equatable {
   final int page;
-  PageAllNewsParams({required this.page})
+  PageAllNewsParams({required this.page});
   @override
   // TODO: implement props
   List<Object?> get props => [page];
