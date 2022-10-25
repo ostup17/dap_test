@@ -1,10 +1,12 @@
 import 'package:dap_test/features/presentation/all_news.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:dap_test/locator_service.dart' as di;
 import 'features/presentation/home.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(MyApp());
 }
 
